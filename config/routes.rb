@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :user do
+    resources :members
+  end
   devise_for :users
   namespace :user do
     resources :events
