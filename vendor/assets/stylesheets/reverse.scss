@@ -1,0 +1,104 @@
+body.skin-reverse {
+  &.sidebar-mini .main-sidebar {
+    &:after {
+      background-color: color(primary);
+    }
+    .sidebar-menu li {
+      &.active {
+        > a {
+          background-color: #fff;
+          box-shadow: none;
+          color: color(primary);
+        }
+        ul.dropdown-menu li a {
+          background-color: transparent;
+          color: color_lighten(font, 10%);
+        }
+      }
+      ul.dropdown-menu li a {
+        background-color: transparent;
+        color: color_lighten(font, 10%);
+      }
+      &.active ul.dropdown-menu li a:hover, ul.dropdown-menu li a:hover {
+        background-color: color_lighten(light, 7.6%);
+        color: color(dark);
+      }
+      &.active ul.dropdown-menu li.active a, ul.dropdown-menu li.active a {
+        background-color: transparent !important;
+        color: color(primary);
+      }
+    }
+  }
+  .main-sidebar {
+    background-color: color(primary);
+    .sidebar-brand a {
+      color: #fff;
+    }
+    .sidebar-menu li {
+      a {
+        color: color_lighten(primary, 25%);
+        &:hover {
+          background-color: #6070e5;
+        }
+      }
+      &.active {
+        a {
+          background-color: #6070e5;
+          &:hover {
+            background-color: #6070e5;
+          }
+        }
+        ul.dropdown-menu li a {
+          &:hover {
+            background-color: #6070e5;
+          }
+          background-color: #6070e5;
+        }
+      }
+      &.menu-header {
+        color: #afb7ff;
+      }
+      ul.dropdown-menu li {
+        a {
+          color: color_lighten(primary, 25%);
+          &:hover {
+            background-color: color(primary);
+            color: #fff;
+          }
+        }
+        &.active a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .navbar-bg, .navbar {
+    background-color: #fff;
+  }
+  .navbar-bg .nav-link, .navbar .nav-link {
+    &.nav-link-user {
+      color: #000;
+    }
+    color: #000;
+  }
+  .navbar-bg .nav-link {
+    &.nav-link-user:hover, &:hover {
+      color: #1a1a1a;
+    }
+  }
+  .navbar .nav-link {
+    &.nav-link-user:hover, &:hover {
+      color: #1a1a1a;
+    }
+  }
+  .navbar-bg .form-inline {
+    .btn, .form-control {
+      background-color: color_lighten(primary, 31.5%);
+    }
+  }
+  .navbar .form-inline {
+    .btn, .form-control {
+      background-color: color_lighten(primary, 31.5%);
+    }
+  }
+}

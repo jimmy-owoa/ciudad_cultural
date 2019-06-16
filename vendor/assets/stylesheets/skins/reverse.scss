@@ -1,0 +1,106 @@
+body.skin-reverse {
+  &.sidebar-mini .main-sidebar {
+    &:after {
+      background-color: #6777ef;
+    }
+    .sidebar-menu li {
+      &.active {
+        > a {
+          background-color: #fff;
+          box-shadow: none;
+          color: #6777ef;
+        }
+        ul.dropdown-menu li a {
+          background-color: transparent;
+          color: #868e96;
+        }
+      }
+      ul.dropdown-menu li a {
+        background-color: transparent;
+        color: #868e96;
+      }
+      &.active ul.dropdown-menu li a:hover, ul.dropdown-menu li a:hover {
+        background-color: #fcfcfd;
+        color: #191d21;
+      }
+      &.active ul.dropdown-menu li.active a, ul.dropdown-menu li.active a {
+        background-color: transparent !important;
+        color: #6777ef;
+      }
+    }
+  }
+  .main-sidebar {
+    background-color: #6777ef;
+    .sidebar-brand a {
+      color: #fff;
+    }
+    .sidebar-menu li {
+      a {
+        color: #dadefb;
+        &:hover {
+          background-color: #6070e5;
+        }
+      }
+      &.active {
+        a {
+          background-color: #6070e5;
+          &:hover {
+            background-color: #6070e5;
+          }
+        }
+        ul.dropdown-menu li a {
+          &:hover {
+            background-color: #6070e5;
+          }
+          background-color: #6070e5;
+        }
+      }
+      &.menu-header {
+        color: #afb7ff;
+      }
+      ul.dropdown-menu li {
+        a {
+          color: #dadefb;
+          &:hover {
+            background-color: #6777ef;
+            color: #fff;
+          }
+        }
+        &.active a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .navbar-bg, .navbar {
+    background-color: #fff;
+  }
+  .navbar-bg .nav-link, .navbar .nav-link {
+    &.nav-link-user {
+      color: #000;
+    }
+    color: #000;
+  }
+  .navbar-bg .nav-link {
+    &.nav-link-user:hover, &:hover {
+      color: #1a1a1a;
+    }
+  }
+  .navbar .nav-link {
+    &.nav-link-user:hover, &:hover {
+      color: #1a1a1a;
+    }
+  }
+  .navbar-bg .form-inline {
+    .btn, .form-control {
+      background-color: #f8f9fe;
+    }
+  }
+  .navbar .form-inline {
+    .btn, .form-control {
+      background-color: #f8f9fe;
+    }
+  }
+}
+
+/*# sourceMappingURL=reverse.css.map */

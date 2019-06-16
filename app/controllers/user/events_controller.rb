@@ -1,4 +1,4 @@
-class User::EventsController < ApplicationController
+class User::EventsController < User::UsersController
   before_action :set_user_event, only: [:show, :edit, :update, :destroy]
 
   # GET /user/events
