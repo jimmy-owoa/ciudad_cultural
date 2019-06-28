@@ -1,35 +1,36 @@
 <p id="notice"><%= notice %></p>
-
-<h1>User Members</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Lastname</th>
-      <th>Email</th>
-      <th>Summary</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user_members.each do |user_member| %>
-      <tr>
-        <td><%= user_member.name %></td>
-        <td><%= user_member.lastname %></td>
-        <td><%= user_member.email %></td>
-        <td><%= user_member.summary %></td>
-        <td><%= user_member.phone %></td>
-        <td><%= link_to 'Show', user_member %></td>
-        <td><%= link_to 'Edit', edit_user_member_path(user_member) %></td>
-        <td><%= link_to 'Destroy', user_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User Member', new_user_member_path %>
+<div class="section-header">
+  <h1>Miembros</h1>
+</div>
+<div class="section-body center">
+  <div class="card">
+    <div class="card-header">
+      <h4>Lista de miembros</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-md">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+          </tr>
+          <% @user_members.each do |user_member| %>
+            <tr>
+              <td><%= user_member.id %></td>
+              <td><%= user_member.name + ' ' + user_member.lastname %></td>
+              <td><%= user_member.email%></td>
+              <td><%= user_member.phone %></td>
+              <td><%= link_to 'Ver', user_member, class: 'btn btn-success' %>
+              <%= link_to 'Editar', edit_user_member_path(user_member), class: 'btn btn-primary' %>
+              <%= link_to 'Eliminar', user_member, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </table>
+        <%= link_to 'Nuevo membero', new_user_member_path %>
+      </div>
+    </div>
+  </div>
+</div>
