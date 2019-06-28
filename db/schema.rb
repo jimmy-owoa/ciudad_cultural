@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2019_06_27_040002) do
 
-  create_table "user_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "user_events", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "date"
@@ -20,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_040002) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "user_members", force: :cascade do |t|
     t.string "name"
     t.string "lastname"
     t.string "email"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_06_27_040002) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
