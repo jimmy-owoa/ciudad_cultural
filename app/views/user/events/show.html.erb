@@ -18,6 +18,12 @@
       <strong>Date:</strong>
       <%= @user_event.date %>
     </p>
+    <p>
+      <strong>Galería</strong>
+    </p>
+      <% @user_event.images.each do |image| %>
+        <%= image_tag image.variant(resize: '500x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
+      <% end %>
   </div>
 </div>
 
