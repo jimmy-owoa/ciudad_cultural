@@ -19,13 +19,13 @@ google:
   service: GCS
   project: ciudadCultural
   credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
-  bucket: ciudad-cultural
+  bucket: ciudad_cultural
 
 google_dev:
   service: GCS
   project: ciudadCultural
   credentials: <%= Rails.root.join("config/secrets/ciudad-cultural.json") %>
-  bucket: ciudad-cultural
+  bucket: ciudad_cultural
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
 #   service: AzureStorage
