@@ -1,6 +1,6 @@
-	<header class="">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center text-left">
+	<header class=""></header>
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-left">
         <div class="col-lg-5 ">
           <h1 class="text-uppercase font-weight-bold-max" style="font-size: 100px; margin-bottom: -5px">talca</h1>
           <h5 class="text-uppercase font-italic font-weight-bold text-yellow mb-5">ciudad cultural</h5>
@@ -20,7 +20,7 @@
 			<h1 class="text-uppercase font-weight-bold-max" style="font-size: 100px; margin-bottom: -5px">Eventos Ciudad</h1>
 			<div class="row pt-5">
 				<% @events.each do |event| %>
-					<div class="col-md-3">
+					<div class="col-md-4 pt-2">
 						<div class="card" style="width: 18rem;">
 							<% if event.images.first.present? %>
 								<%= image_tag event.images.first, style:'height: 160px; object-fit: cover;'%>
