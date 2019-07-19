@@ -1,0 +1,35 @@
+<div class="section-header">
+  <h1>Eventos</h1>
+</div>
+<div class="section-body center">
+  <div class="card">
+    <div class="card-header">
+      <h4>Lista de eventos</h4>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-md">
+          <tr>
+            <th>#</th>
+            <th>Titulo</th>
+            <th>Fecha del Evento</th>
+            <th>Fecha Creación</th>
+            <th>Acciones</th>
+          </tr>
+          <% @events.each do |event| %>
+            <tr>
+              <td><%= event.id %></td>
+              <td><%= event.title %></td>
+              <td><%= event.date.strftime("%d/%m/%Y") %></td>
+              <td><%= event.created_at.strftime("%d/%m/%Y") %></td>
+              <td><%= link_to 'Ver', event, class: 'btn btn-success' %>
+              <%= link_to 'Editar', edit_event_path(event), class: 'btn btn-primary' %>
+              <%= link_to 'Eliminar', event, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </table>
+        <%= link_to 'Nuevo evento', new_event_path %>
+      </div>
+    </div>
+  </div>
+</div>

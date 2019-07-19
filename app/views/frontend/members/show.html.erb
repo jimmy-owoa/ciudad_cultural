@@ -4,7 +4,6 @@
 </div>
 <div class="card">
   <div class="card-body">
-    <%= image_tag @user_member.image.variant(resize: '500x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
     <p>
       <strong>Nombre:</strong>
       <%= @user_member.name + ' ' + @user_member.lastname %>
@@ -24,7 +23,6 @@
       <strong>Teléfono:</strong>
       <%= @user_member.phone %>
     </p>
-
   </div>
 </div>
 

@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row align-items-center justify-content-center text-left">
+		<div class="col-lg-5">
+			<h1 class="text-uppercase font-weight-bold-max" style="font-size: 100px; margin-bottom: -5px">Somos</h1>
+			<h5 class="text-uppercase font-italic font-weight-bold text-yellow mb-5">contigo hacemos equipo</h5>
+			<p class="font-weight-light mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus, odio non imperdiet placerat, odio nibh varius tellus, nec condimentum risus lectus ut dolor. </p>
+			<button class="btn btn-primary" style="border-radius: 12rem;">Ver más</button>
+		</div>
+		<div class="col-lg-7">
+      <div class="row">
+      <% @members.each do |member| %>
+        <div class="col-md-2">
+          <div class="card" style="width: 18rem;">
+            <%= image_tag member.image.variant(resize: '500x'), class:'avatar', style: 'height: 120px; width: 120px; object-fit: cover; border-radius: 50%;' %>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <%= member.name %>
+      <% end %>
+      </div>
+			<%# border-radius: 15px 50px;  %>
+		</div>
+	</div>
+</div>

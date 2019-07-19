@@ -1,0 +1,39 @@
+<%= form_with(model: user_event, local: true) do |form| %>
+  <% if user_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user_event.errors.count, "error") %> prohibited this user_event from being saved:</h2>
+
+      <ul>
+      <% user_event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="card">
+    <div class="card-header">
+      <h4>Formulario</h4>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.label :description %>
+        <%= form.text_area :description, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.label :date %>
+        <%= form.datetime_select :date, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <%= form.label :images %>
+        <%= form.file_field :images, multiple: true, class: 'form-control' %>
+      </div>
+      <div class="card-footer text-right">
+        <%= form.submit class:"btn btn-primary mr-1" %>
+      </div>
+    </div>
+  </div>
+<% end %>
