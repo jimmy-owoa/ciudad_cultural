@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<div class="section-header">
+  <h1><%= @user_event.title %></h1>
+</div>
+<div class="card">
+  <div class="card-body">
+    <p>
+      <strong>Title:</strong>
+      <%= @user_event.title %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @user_event.description %>
+    </p>
+
+    <p>
+      <strong>Date:</strong>
+      <%= @user_event.date %>
+    </p>
+    <p>
+      <strong>Galería</strong>
+    </p>
+      <% @user_event.images.each do |image| %>
+        <%= image_tag image.variant(resize: '500x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
+      <% end %>
+  </div>
+</div>
+
+<%= link_to 'Back', root_path %>

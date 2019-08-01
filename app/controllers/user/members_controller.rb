@@ -69,6 +69,6 @@ class User::MembersController < User::UsersController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_member_params
-      params.require(:user_member).permit(:name, :lastname, :email, :summary, :phone)
+      params.require(:user_member).permit(:name, :lastname, :email, :summary, :phone, :image)
     end
 end
