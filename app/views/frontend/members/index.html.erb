@@ -7,19 +7,18 @@
 			<button class="btn btn-primary" style="border-radius: 12rem;">Ver más</button>
 		</div>
 		<div class="col-lg-7">
-      <div class="row">
-      <% @members.each do |member| %>
-        <div class="col-md-2">
-          <div class="card" style="width: 18rem;">
-            <%= image_tag member.image.variant(resize: '500x'), class:'avatar', style: 'height: 120px; width: 120px; object-fit: cover; border-radius: 50%;' %>
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+      <div class="card-deck">
+        <% @members.each do |member| %>
+          <div class="card">
+          <%= image_tag member.image.variant(resize: '500x'), class:'avatar card-img-top align-self-center', style: 'height: 120px; width: 120px; object-fit: cover; border-radius: 50%;' %>
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= member.name %></h5>
+            <p class="card-text"><%= member.summary %></p>
           </div>
-        </div>
-        <%= member.name %>
-      <% end %>
+          </div>
+        <% end %>
       </div>
+    </div>
 			<%# border-radius: 15px 50px;  %>
 		</div>
 	</div>
