@@ -20,6 +20,6 @@ class Frontend::FrontendsController < ApplicationController
   end
 
   def talca
-    
+    @talca_events = User::Event.talca_events
   end
 end
