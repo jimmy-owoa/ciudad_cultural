@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   scope module: 'frontend' do
     resources :members
     resources :events
+    get 'contact', to: 'frontends#contact'
+    post 'send_email', to: 'frontends#send_email'
     root to: "frontends#index"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
