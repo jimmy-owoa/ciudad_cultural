@@ -13,7 +13,13 @@ class Frontend::FrontendsController < ApplicationController
     email = params[:email]
     message = params[:message]
     phone = params[:phone]
-    UserNotifierMailer.send_contact(name, email, message, phone).deliver
+    #UserNotifierMailer.send_contact(name, email, message, phone).deliver
+    respond_to do |format|
+      format.html { redirect_to root_path, notice: 'Correo enviado exitosamente.' }
+    end
+  end
+
+  def talca
     
   end
 end

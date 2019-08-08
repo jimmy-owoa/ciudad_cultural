@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :members
     resources :events
     get 'contact', to: 'frontends#contact'
+    get 'talca', to: 'frontends#talca'
     post 'send_email', to: 'frontends#send_email'
     root to: "frontends#index"
   end
