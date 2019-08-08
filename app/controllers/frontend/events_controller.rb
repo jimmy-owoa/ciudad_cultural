@@ -4,7 +4,8 @@ class Frontend::EventsController < Frontend::FrontendsController
   # GET /user/events
   # GET /user/events.json
   def index
-    @events = User::Event.all
+    @past_events = User::Event.past_events
+    @next_events = User::Event.next_events
   end
 
   # GET /user/events/1

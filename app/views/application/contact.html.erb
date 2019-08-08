@@ -1,0 +1,22 @@
+<div class="card p-4">
+	<h2 class="text-center">Formulario de contacto</h2>
+	<%= form_tag '/send_email' do %>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Nombre</label>
+			<%= text_field_tag :name, "", class: 'form-control', placeholder: 'Ingrese su nombre'%>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email</label>
+			<%= email_field_tag :email, "", class: 'form-control', placeholder: 'Ingrese su email'%>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputEmail1">Teléfono</label>
+			<%= number_field_tag :phone, "", class: 'form-control', placeholder: 'Ingrese su teléfono'%>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">Mensaje</label>
+			<%= text_area_tag :message, "", class: 'form-control', placeholder: 'Mensaje'%>
+		</div>
+		<%= submit_tag 'Enviar', class:"btn btn-primary btn-block" %>
+	<% end %>
+</div>
