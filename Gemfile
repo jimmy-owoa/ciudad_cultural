@@ -32,7 +32,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-gem "mini_magick"
+gem "mini_magick", ">= 4.9.4"
 
 gem "google-cloud-storage", "~> 1.8", require: false
 gem 'sendgrid-ruby'
