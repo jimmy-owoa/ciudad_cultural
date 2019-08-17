@@ -22,4 +22,8 @@ class Frontend::FrontendsController < ApplicationController
   def talca
     @talca_events = User::Event.talca_events
   end
+
+  def work_with_us
+
+  end
 end

@@ -1,18 +1,18 @@
 <div class="row align-items-center justify-content-center text-left">
-	<div class="col-lg-5 ">
-		<h1 class="text-uppercase font-weight-bold-max" style="font-size: 90px; margin-bottom: -5px">Somos</h1>
+	<div class="col-lg-5 col-sm-6">
+		<h1 class="text-uppercase font-weight-bold-max display-2">Somos</h1>
 		<h5 class="text-uppercase font-italic font-weight-bold text-yellow mb-5">ciudad cultural</h5>
 		<p class="font-weight-light mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus, odio non imperdiet placerat, odio nibh varius tellus, nec condimentum risus lectus ut dolor. </p>
 		<%= link_to 'Ver más', events_path, class: 'btn btn-primary', style: 'border-radius: 12rem;' %>
 	</div>
-	<div class="col-lg-7">
-	<%= image_tag asset_url("header.png")%>
+	<div class="col-lg-7 col-sm-6">
+	<%= image_tag asset_url("header.png"), class: 'img-fluid'%>
 		<%# border-radius: 15px 50px;  %>
 	</div>
 </div>
 <hr class="divider my-4">
 <div class="col-lg-12 ">
-	<h1 class="text-uppercase font-weight-bold-max" style="font-size: 70px; margin-bottom: -5px">Próximos Eventos</h1>
+	<h1 class="text-uppercase font-weight-bold-max display-4">Próximos Eventos</h1>
 	<div class="row pt-5">
 		<% @events.each do |event| %>
 			<div class="col-md-4 pt-2">
