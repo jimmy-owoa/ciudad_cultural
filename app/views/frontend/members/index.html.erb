@@ -1,9 +1,25 @@
 <div class="">
 	<div class="row align-items-center justify-content-center text-left">
-		<div class="col-lg-5">
+		<div class="col-lg-12">
 			<h1 class="text-uppercase font-weight-bold-max" style="font-size: 100px; margin-bottom: -5px">Somos</h1>
 			<h5 class="text-uppercase font-italic font-weight-bold text-yellow mb-5">contigo hacemos equipo</h5>
-			<p class="font-weight-light mb-5 text-justify">Somos soñadores y creadores, que apostamos a cambiar las
+      <div class="col-lg-12">
+        <div class="card-deck">
+          <% @members.each do |member| %>
+            <div class="card">
+              <%= image_tag member.image.variant(resize: '500x'), class:'avatar card-img-top align-self-center', style: 'height: 120px; width: 120px; object-fit: cover; border-radius: 50%;' %>
+              <div class="card-body text-center">
+                <h5 class="card-title"><%= member.name + ' ' + member.lastname %></h5>
+                <div class="card-text">
+                  <%= member.email %>
+                  <p><%= member.summary %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <p class="font-weight-light mb-5 text-justify">Somos soñadores y creadores, que apostamos a cambiar las
         ciudades que habitamos a través de la generación de contenidos
         culturales, su acceso y goce para todos.
         <br/>
@@ -18,22 +34,6 @@
         culturales. 
       </p>
 		</div>
-		<div class="col-lg-7">
-      <div class="card-deck">
-        <% @members.each do |member| %>
-          <div class="card">
-          <%= image_tag member.image.variant(resize: '500x'), class:'avatar card-img-top align-self-center', style: 'height: 120px; width: 120px; object-fit: cover; border-radius: 50%;' %>
-          <div class="card-body text-center">
-            <h5 class="card-title"><%= member.name + ' ' + member.lastname %></h5>
-            <div class="card-text">
-              <%= member.email %>
-              <p><%= member.summary %></p>
-            </div>
-          </div>
-          </div>
-        <% end %>
-      </div>
-    </div>
 			<%# border-radius: 15px 50px;  %>
 		</div>
 	</div>
