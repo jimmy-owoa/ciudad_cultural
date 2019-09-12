@@ -3,8 +3,20 @@
 		<div class="col-lg-5">
 			<h1 class="text-uppercase font-weight-bold-max" style="font-size: 100px; margin-bottom: -5px">Somos</h1>
 			<h5 class="text-uppercase font-italic font-weight-bold text-yellow mb-5">contigo hacemos equipo</h5>
-			<p class="font-weight-light mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus, odio non imperdiet placerat, odio nibh varius tellus, nec condimentum risus lectus ut dolor. </p>
-			<button class="btn btn-primary" style="border-radius: 12rem;">Ver más</button>
+			<p class="font-weight-light mb-5 text-justify">Somos soñadores y creadores, que apostamos a cambiar las
+        ciudades que habitamos a través de la generación de contenidos
+        culturales, su acceso y goce para todos.
+        <br/>
+        Ponemos la creatividad como principal activo y brújula para
+        dibujar un territorio cultural al servicio de los habitantes de una
+        ciudad. <br/><br/>
+        Apostamos a la sustentabilidad y sostenibilidad a través del
+        circulo de la economía naranja, fomentamos el consumo de estos
+        bienes en el espacio publico, y a la vez generamos apoyo a las
+        industrias creativas, economías naranjas, siendo estas los
+        principales motores de financiamiento de nuestras actividades
+        culturales. 
+      </p>
 		</div>
 		<div class="col-lg-7">
       <div class="card-deck">
@@ -12,8 +24,11 @@
           <div class="card">
           <%= image_tag member.image.variant(resize: '500x'), class:'avatar card-img-top align-self-center', style: 'height: 120px; width: 120px; object-fit: cover; border-radius: 50%;' %>
           <div class="card-body text-center">
-            <h5 class="card-title"><%= member.name %></h5>
-            <p class="card-text"><%= member.summary %></p>
+            <h5 class="card-title"><%= member.name + ' ' + member.lastname %></h5>
+            <div class="card-text">
+              <%= member.email %>
+              <p><%= member.summary %></p>
+            </div>
           </div>
           </div>
         <% end %>
