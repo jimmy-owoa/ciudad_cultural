@@ -1,11 +1,13 @@
 <div class="row align-items-center justify-content-center text-left">
-	<div class="col-lg-5 col-sm-6">
+	<div class="col-lg-5 col-sm-12">
 		<h1 class="text-uppercase font-weight-bold-max display-4">Plataforma</h1>
 		<h5 class="text-uppercase font-italic font-weight-bold text-yellow mb-5">de cultura urbana</h5>
-		<p class="font-weight-light mb-5">Intervenimos la ciudad, creando un lenguaje narrado y colorido, generando identidad y apropiación por parte de la comunidad, mediante las intervenciones artísticas y culturales. </p>
-		<%= link_to 'Ver más', events_path, class: 'btn btn-primary', style: 'border-radius: 12rem;' %>
+		<p class="font-weight-light">Intervenimos la ciudad, creando un lenguaje narrado y colorido, generando identidad y apropiación por parte de la comunidad, mediante las intervenciones artísticas y culturales. </p>
+		<div class="text-center">
+			<%= link_to 'Ver más', events_path, class: 'btn btn-primary text-center', style: 'border-radius: 12rem;' %>
+		</div>
 	</div>
-	<div class="col-lg-7 col-sm-6">
+	<div class="col-lg-7 col-sm-6 pt-4">
 	<%= image_tag asset_url("header.png"), class: 'img-fluid'%>
 		<%# border-radius: 15px 50px;  %>
 	</div>
@@ -31,12 +33,4 @@
 			</div>
 		<% end %>
 	</div>
-</div>
-<hr class="divider my-4">
-<div class="col-lg-12 ">
-	<h1 class="text-uppercase font-weight-bold-max display-4">Repertorio</h1>
-<ul>
-	<li><h1 class="text-uppercase font-weight-bold-max h4">Ópera prima RetroFest</h1></li>
-	<li><h1 class="text-uppercase font-weight-bold-max h4">Impromtus Ciudad</h1>(Improvisaciones ciudad)</li>
-</ul>
 </div>

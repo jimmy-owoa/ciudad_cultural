@@ -4,17 +4,17 @@
     <title>CiudadCultural</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag    'frontend', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'frontend', 'data-turbolinks-track': 'reload' %>
   </head>
 
- <body id="page-top">
+ <body id="page-top col-lg-12">
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light pt-4" id="mainNav">
     <div class="container align-items-start">
-      <a class="navbar-brand js-scroll-trigger" href="/"></a><%= link_to (image_tag asset_url("logo.png"), height: '100px'), root_path %>
+      <a class="navbar-brand js-scroll-trigger" href="/"></a><%= link_to (image_tag asset_url("logo.png"), class: 'img', style: 'max-height: 80px'), root_path %>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -39,5 +39,10 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
+  <footer id="sticky-footer" class="py-4 bg-light text-dark-50">
+    <div class="container text-center">
+      <small>Copyright &copy; La Ciudad Cultural</small>
+    </div>
+  </footer>
 </body>
 </html>
