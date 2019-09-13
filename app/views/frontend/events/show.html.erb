@@ -1,16 +1,11 @@
 <p id="notice"><%= notice %></p>
 <div class="section-header">
-  <div class="text-uppercase font-weight-bold-max display-4"><%= @user_event.title %></div>
+  <div class="text-uppercase font-weight-bold-max display-4 text-center"><%= @user_event.title %></div>
 </div>
 <div class="card">
   <div class="card-body">
     <p>
       <%= @user_event.description %>
-    </p>
-
-    <p>
-      <strong>Date:</strong>
-      <%= @user_event.date.strftime("%d-%m-%y") %>
     </p>
     <p>
       <strong>Galería</strong>
@@ -18,6 +13,9 @@
       <% @user_event.images.each do |image| %>
         <%= image_tag image.variant(resize: '500x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
       <% end %>
+    <div class="text-right">
+      <%= @user_event.date.strftime("%d-%m-%y") %>
+    </div>
   </div>
 </div>
 

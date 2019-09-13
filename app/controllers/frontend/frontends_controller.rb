@@ -2,7 +2,7 @@ class Frontend::FrontendsController < ApplicationController
   layout 'application'
 
   def index
-    @events = User::Event.next_events.order(created_at: :desc)
+    @events = User::Event.all.order(created_at: :desc)
   end
 
   def contact 
