@@ -34,6 +34,8 @@ gem 'jquery-rails'
 # gem 'mini_magick', '~> 4.8'
 gem "mini_magick", ">= 4.9.4"
 gem "nokogiri", ">= 1.10.4"
+gem 'heroku-deflater', :group => :production
+
 gem "google-cloud-storage", "~> 1.8", require: false
 gem 'sendgrid-ruby'
 # Use Capistrano for deployment
