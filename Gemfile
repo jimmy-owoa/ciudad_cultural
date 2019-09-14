@@ -33,6 +33,7 @@ gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem "mini_magick"
+gem 'heroku-deflater', :group => :production
 
 gem "google-cloud-storage", "~> 1.8", require: false
 gem 'sendgrid-ruby'
