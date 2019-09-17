@@ -4,6 +4,9 @@
 </div>
 <div class="card">
   <div class="card-body">
+    <% if @user_event.main_image.attachment %>
+      <%= image_tag @user_event.main_image.variant(resize: '500x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
+    <% end %>
     <p>
       <strong>Title:</strong>
       <%= @user_event.title %>
