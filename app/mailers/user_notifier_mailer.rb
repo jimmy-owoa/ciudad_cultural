@@ -5,6 +5,6 @@ class UserNotifierMailer < ApplicationMailer
 		@message = message
 		@phone = phone
 		@name = name
-		mail( :to => 'jeremiasgup@gmail.com', :subject => 'Formulario de contacto web', :from => email)
+		mail( :to => 'j@laciudadcultural.cl', :subject => 'Contacto web [La Ciudad Cultural]', :from => email)
 	end
 end
