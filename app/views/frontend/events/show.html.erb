@@ -11,14 +11,43 @@
       <p>
         <strong>Galería</strong>
       </p>
-      <% @user_event.images.each do |image| %>
-        <%= image_tag image.variant(resize: '320x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
-      <% end %>
+      <div class='row'>
+        <% @user_event.images.each do |image| %>
+          <div class="col-lg-3 col-md-4 col-xs-6 thumb">  
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+              data-image="<%= url_for(image)%>"
+              data-target="#image-gallery">
+            <%= image_tag image, class: 'img-thumbnail' %>
+            </a>
+          </div>
+        <% end %>
+      </div>
     </div>
     <div class="text-right">
       <%= @user_event.date.strftime("%d-%m-%y") %>
     </div>
   </div>
 </div>
+<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="image-gallery-title"></h4>
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary float-left" id="show-previous-image">Anterior
+            </button>
+
+            <button type="button" id="show-next-image" class="btn btn-secondary float-right">Siguiente
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <%= link_to 'Back', root_path %>
