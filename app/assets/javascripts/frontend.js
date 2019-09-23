@@ -20,8 +20,7 @@
 //= require_tree .
 let modalId = $('#image-gallery');
 
-$(document)
-  .ready(function () {
+$(document).on("turbolinks:load", function() {
 
     loadGallery(true, 'a.thumbnail');
 
