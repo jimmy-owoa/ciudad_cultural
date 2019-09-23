@@ -14,7 +14,7 @@
       <div class='row'>
         <% @user_event.images.each do |image| %>
           <div class="col-lg-3 col-md-4 col-xs-6 thumb">  
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+            <a class="thumbnail" href="#" data-toggle="modal" data-title=""
               data-image="<%= url_for(image)%>"
               data-target="#image-gallery">
             <%= image_tag image, class: 'img-thumbnail' %>
