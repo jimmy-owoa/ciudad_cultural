@@ -13,28 +13,49 @@
  <body id="page-top col-lg-12">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light pt-4" id="mainNav">
-    <div class="container align-items-start">
-      <a class="navbar-brand js-scroll-trigger" href="/"></a><%= link_to (image_tag asset_url("logo.png"), class: 'img', style: 'max-height: 80px'), root_path %>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0 pr-4">
-          <li class="nav-item">
-            <%= link_to "Somos", members_path, class:'nav-link js-scroll-trigger'%>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Eventos", events_path, class:'nav-link js-scroll-trigger'%>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Contacto", contact_path, class:'nav-link js-scroll-trigger'%>
-          </li>
-        </ul>
-        <%= link_to "Únete", work_with_us_path, class:'btn btn-primary', style: 'border-radius: 12rem;'%>
-      </div>
+  <div class="container">
+    <header class="header">
+      <a class="navbar-brand js-scroll-trigger" href="/"></a><%= link_to (image_tag asset_url("logo.png"), class: 'img', style: ' padding-left: 20px; max-height: 80px'), root_path %>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li class="nav-item">
+          <%= link_to "Somos", members_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Eventos", events_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contacto", contact_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Únete", work_with_us_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+      </ul>
+    </header>
+  </div>
+<!-- <nav class="navbar navbar-expand-lg navbar-light pt-4" id="mainNav">
+  <div class="container align-items-start">
+    <a class="navbar-brand js-scroll-trigger" href="/"></a><%= link_to (image_tag asset_url("logo.png"), class: 'img', style: 'max-height: 80px'), root_path %>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto my-2 my-lg-0 pr-4">
+        <li class="nav-item">
+          <%= link_to "Somos", members_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Eventos", events_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contacto", contact_path, class:'nav-link js-scroll-trigger'%>
+        </li>
+      </ul>
+      <%= link_to "Únete", work_with_us_path, class:'btn btn-primary', style: 'border-radius: 12rem;'%>
     </div>
-  </nav>
+  </div>
+</nav>-->
   <div class="container pb-4">
     <p class="notice alert-success"><%= notice %></p>
     <p class="alert"><%= alert %></p>
