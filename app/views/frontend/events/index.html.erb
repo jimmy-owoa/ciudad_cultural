@@ -1,8 +1,8 @@
 <div class="col-lg-12 text-center">
-	<h1 class="text-uppercase font-weight-bold-max" style="font-size: 50px; margin-bottom: -5px">Eventos realizados</h1>
+	<h1 class="text-uppercase font-weight-bold-max" style="font-size: 50px; margin-bottom: -5px">Próximos eventos</h1>
 	<div class="row pt-5">
-		<% @past_events.each do |event| %>
-			<div class="col-md-4 pt-2 text-center d-flex justify-content-center">
+		<% @next_events.each do |event| %>
+			<div class="col-md-4 pt-2">
 				<div class="card" style="width: 18rem;">
 					<% if event.images.first.present? %>
 						<%= image_tag event.images.first, style:'height: 160px; object-fit: cover;'%>
@@ -21,10 +21,10 @@
 </div>
 <hr class="divider my-4">
 <div class="col-lg-12 text-center">
-	<h1 class="text-uppercase font-weight-bold-max" style="font-size: 50px; margin-bottom: -5px">Próximos eventos</h1>
+	<h1 class="text-uppercase font-weight-bold-max" style="font-size: 50px; margin-bottom: -5px">Eventos realizados</h1>
 	<div class="row pt-5">
-		<% @next_events.each do |event| %>
-			<div class="col-md-4 pt-2">
+		<% @past_events.each do |event| %>
+			<div class="col-md-4 pt-2 text-center d-flex justify-content-center">
 				<div class="card" style="width: 18rem;">
 					<% if event.images.first.present? %>
 						<%= image_tag event.images.first, style:'height: 160px; object-fit: cover;'%>
