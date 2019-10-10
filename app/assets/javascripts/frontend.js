@@ -14,7 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
-//= require creative
+//= require vendors
 //= require popper
 //= require bootstrap
 //= require_tree .
