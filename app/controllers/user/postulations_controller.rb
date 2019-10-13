@@ -56,7 +56,7 @@ class User::PostulationsController < User::UsersController
   def destroy
     @postulation.destroy
     respond_to do |format|
-      format.html { redirect_to postulations_url, notice: "Postulation was successfully destroyed." }
+      format.html { redirect_to user_postulations_path, notice: "Postulation was successfully destroyed." }
       format.json { head :no_content }
     end
   end

@@ -12,31 +12,32 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label "Nombre" %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname %>
+    <%= form.label "Apellidos" %>
+    <%= form.text_field :lastname, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message %>
+    <%= form.label "Mensaje" %>
+    <%= form.text_area :message, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :user_event_id %>
-    <%= form.text_field :user_event_id %>
+    <%= form.label "Evento" %>
+    <%= form.select(:user_event_id, options_for_select(@events.map{|event| [event.title, event.id]}), {}, {class:' form-control'}) %>
+
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Enviar Postulación" %>
   </div>
 <% end %>
