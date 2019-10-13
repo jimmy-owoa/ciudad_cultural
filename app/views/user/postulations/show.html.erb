@@ -25,4 +25,9 @@
   <%= @postulation.user_event.title %>
 </p>
 
+<% @postulation.images.each do |image| %>
+  <%= image_tag image.variant(resize: '500x'), style: 'height: 200px; width: 300px; object-fit: cover;' %>
+<% end %>
+
+<br>
 <%= link_to 'Back', user_postulations_path %>

@@ -12,7 +12,7 @@ class Frontend::PostulationsController < Frontend::FrontendsController
 
     respond_to do |format|
       if @postulation.save
-        format.html { redirect_to @postulation, notice: "Postulation was successfully created." }
+        format.html { redirect_to root_path, notice: "Su postulación fué enviada con éxito." }
         format.json { render :show, status: :created, location: @postulation }
       else
         format.html { render :new }
@@ -25,6 +25,6 @@ class Frontend::PostulationsController < Frontend::FrontendsController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def postulation_params
-    params.require(:postulation).permit(:name, :lastname, :email, :message, :user_event_id)
+    params.require(:postulation).permit(:name, :lastname, :email, :message, :user_event_id, images: [])
   end
 end

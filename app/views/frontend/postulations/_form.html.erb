@@ -34,7 +34,11 @@
   <div class="field">
     <%= form.label "Evento" %>
     <%= form.select(:user_event_id, options_for_select(@events.map{|event| [event.title, event.id]}), {}, {class:' form-control'}) %>
+  </div>
 
+  <div class="form-group">
+    <%= form.label "Fotos" %>
+    <%= form.file_field :images, multiple: true, class: 'form-control' %>
   </div>
 
   <div class="actions">
