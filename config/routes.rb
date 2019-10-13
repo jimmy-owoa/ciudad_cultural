@@ -3,15 +3,15 @@ Rails.application.routes.draw do
   namespace :user do
     resources :members
     resources :events
-    root to: 'events#index'
+    root to: "events#index"
   end
-  scope module: 'frontend' do
+  scope module: "frontend" do
     resources :members
     resources :events
-    get 'contact', to: 'frontends#contact'
-    get 'talca', to: 'frontends#talca'
-    get 'work-with-us', to: 'frontends#work_with_us'
-    post 'send_email', to: 'frontends#send_email'
+    get "contact", to: "frontends#contact"
+    get "talca", to: "frontends#talca"
+    get "work-with-us", to: "frontends#work_with_us"
+    post "send_email", to: "frontends#send_email"
     root to: "frontends#index"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
