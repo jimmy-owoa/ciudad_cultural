@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @postulation.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @postulation.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @postulation.email %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @postulation.message %>
+</p>
+
+<p>
+  <strong>User event:</strong>
+  <%= @postulation.user_event.title %>
+</p>
+
+<%= link_to 'Back', user_postulations_path %>

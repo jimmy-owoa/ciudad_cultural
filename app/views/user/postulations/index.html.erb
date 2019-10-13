@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Postulations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th>User event</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @postulations.each do |postulation| %>
+      <tr>
+        <td><%= postulation.name %></td>
+        <td><%= postulation.lastname %></td>
+        <td><%= postulation.email %></td>
+        <td><%= postulation.message %></td>
+        <td><%= postulation.user_event.title %></td>
+        <td><%= link_to 'Show', user_postulation_path(postulation) %></td>
+        <td><%= link_to 'Destroy', postulation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

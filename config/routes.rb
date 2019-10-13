@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   namespace :user do
     resources :members
     resources :events
+    resources :postulations
     root to: "events#index"
   end
   scope module: "frontend" do
+    resources :postulations
     resources :members
     resources :events
     get "contact", to: "frontends#contact"
