@@ -2,6 +2,11 @@
 <div class="section-header">
   <div class="text-uppercase font-weight-bold-max display-4 text-center"><%= @user_event.title %></div>
 </div>
+<% if @user_event.date > Date.today %>
+<div class="text-right">
+  <%= link_to 'Postular a este evento', new_postulation_path, class: 'btn btn-success mb-2 mt-2' %>
+</div>
+<% end %>
 <div class="card">
   <div class="card-body">
     <p>
