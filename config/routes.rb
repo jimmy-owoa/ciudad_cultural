@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  if Rails.env.production?
+    get "404", :to => "application#page_not_found"
+  end
   namespace :user do
     resources :members
     resources :events
