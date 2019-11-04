@@ -14,11 +14,11 @@
 </div>
 <hr class="divider my-4">
 <div class="col-lg-12 ">
-	<h1 class="text-uppercase font-weight-bold-max display-4">Partitura cultural</h1>
-	<div class="row pt-5">
+	<h1 class="text-uppercase text-center font-weight-bold-max display-4">Partitura cultural</h1>
+	<div class="row pt-2">
 		<% @events.each do |event| %>
 			<div class="col-md-4 pt-2">
-				<div class="card" style="width: 18rem;">
+				<div class="card">
 					<% if event.main_image.attachment %>
 						<%= image_tag event.main_image, style:'height: 160px; object-fit: cover;'%>
 					<% else %>
