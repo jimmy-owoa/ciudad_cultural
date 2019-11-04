@@ -13,22 +13,22 @@
 <div class="card p-4">
   <div class="field">
     <%= form.label "Nombre" %>
-    <%= form.text_field :name, class: "form-control" %>
+    <%= form.text_field :name, class: "form-control", required: true %>
   </div>
 
   <div class="field">
     <%= form.label "Apellidos" %>
-    <%= form.text_field :lastname, class: "form-control" %>
+    <%= form.text_field :lastname, class: "form-control", required: true %>
   </div>
 
   <div class="field">
     <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control" %>
+    <%= form.text_field :email, class: "form-control", type: 'email', required: true %>
   </div>
 
   <div class="field">
     <%= form.label "Mensaje" %>
-    <%= form.text_area :message, class: "form-control" %>
+    <%= form.text_area :message, class: "form-control", required: true %>
   </div>
 
   <div class="field">
