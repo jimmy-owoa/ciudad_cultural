@@ -4,8 +4,8 @@
 		<% @next_events.each do |event| %>
 			<div class="col-md-4 pt-2">
 				<div class="card" style="width: 18rem;">
-					<% if event.images.first.present? %>
-						<%= image_tag event.images.first, style:'height: 160px; object-fit: cover;'%>
+					<% if event.main_image.attachment %>
+						<%= image_tag event.main_image, style:'height: 160px; object-fit: cover;'%>
 					<% else %>
 						<%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>
 					<% end %>
@@ -26,8 +26,8 @@
 		<% @past_events.each do |event| %>
 			<div class="col-md-4 pt-2 text-center d-flex justify-content-center">
 				<div class="card" style="width: 18rem;">
-					<% if event.images.first.present? %>
-						<%= image_tag event.images.first, style:'height: 160px; object-fit: cover;'%>
+					<% if event.main_image.attachment %>
+						<%= image_tag event.main_image, style:'height: 160px; object-fit: cover;'%>
 					<% else %>
 						<%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>
 					<% end %>
