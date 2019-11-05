@@ -13,14 +13,32 @@
 	</div>
 </div>
 <hr class="divider my-4">
-<div class="col-lg-12 ">
+<div class="card pt-2 pb-2">
+	<div class="row text-center">
+		<div class="col-md-12 display-4 font-weight-bold-max text-uppercase">
+			<%= @events.first.title%>
+		</div>
+		<div class="col-md-12">
+			<% if @events.first.main_image.attachment %>
+				<%= image_tag @events.first.main_image.variant(resize: "500x"), style:'height: 500px; object-fit: cover;'%>
+			<% else %>
+				<%= image_tag asset_url("computador.png"), style:'height: 500px; object-fit: cover;'%>
+			<% end %>
+		</div>
+		<div class="col-md-12 pt-2">
+			<%= link_to "Mas información aquí", event_path(@events.first), class: 'btn btn-primary' %>
+		</div>
+	</div>
+</div>
+<hr class="divider my-4">
+<div class="col-lg-12 card pt-2 pb-2">
 	<h1 class="text-uppercase text-center font-weight-bold-max display-4">Partitura cultural</h1>
 	<div class="row pt-2">
 		<% @events.each do |event| %>
 			<div class="col-md-4 pt-2">
-				<div class="card">
+				<div class="card" style="min-width: 21rem;">
 					<% if event.main_image.attachment %>
-						<%= image_tag event.main_image, style:'height: 160px; object-fit: cover;'%>
+						<%= image_tag event.main_image.variant(resize: "x300"), style:'height: 160px; object-fit: cover;'%>
 					<% else %>
 						<%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>
 					<% end %>

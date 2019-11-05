@@ -3,9 +3,9 @@
 	<div class="row pt-5">
 		<% @next_events.each do |event| %>
 			<div class="col-md-4 pt-2">
-				<div class="card" style="width: 18rem;">
+				<div class="card" style="min-width: 21rem;">
 					<% if event.main_image.attachment %>
-						<%= image_tag event.main_image, style:'height: 160px; object-fit: cover;'%>
+						<%= image_tag event.main_image.variant(resize: "x260"), style:'height: 160px; object-fit: cover;'%>
 					<% else %>
 						<%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>
 					<% end %>
@@ -25,9 +25,9 @@
 	<div class="row pt-5">
 		<% @past_events.each do |event| %>
 			<div class="col-md-4 pt-2 text-center d-flex justify-content-center">
-				<div class="card" style="width: 18rem;">
+				<div class="card" style="min-width: 21rem;">
 					<% if event.main_image.attachment %>
-						<%= image_tag event.main_image, style:'height: 160px; object-fit: cover;'%>
+						<%= image_tag event.main_image.variant(resize: "x260"), style:'height: 160px; object-fit: cover;'%>
 					<% else %>
 						<%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>
 					<% end %>

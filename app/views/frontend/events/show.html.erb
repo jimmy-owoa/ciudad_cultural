@@ -1,31 +1,40 @@
 <p id="notice"><%= notice %></p>
-<div class="section-header">
-  <div class="text-uppercase font-weight-bold-max h1 text-center"><%= @user_event.title %></div>
-</div>
 <div class="card">
   <div class="card-body">
-    <p>
-      <%= @user_event.description %>
-    </p>
-    <div class="col-md-12 text-center">
-      <%= link_to "Descarga las bases aquí", @user_event.file if @user_event.file.attached? %>
+    <div class="section-header">
+      <div class="text-uppercase font-weight-bold-max h1 text-center"><%= @user_event.title %></div>
     </div>
-    <div class="text-center">
-      <p>
-        <strong>Galería</strong>
-      </p>
-      <div class='row'>
-        <% @user_event.images.each do |image| %>
-          <div class="col-lg-3 col-md-4 col-xs-6 thumb">  
-            <a class="thumbnail" data-toggle="modal" data-title=""
-              data-image="<%= url_for(image)%>"
-              data-target="#image-gallery">
-            <%= image_tag image, class: 'img-thumbnail' %>
-            </a>
-          </div>
+    <div class="col-md-12">
+      <% if @user_event.main_image.attachment %>
+          <%= image_tag @user_event.main_image.variant(resize: "x500"), style:'height: 400px; width: 100%; object-fit: cover;'%>
+        <% else %>
+          <%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>
         <% end %>
-      </div>
     </div>
+    <div class="col-md-12 pt-4">
+      <%= @user_event.description %>
+    </div>
+    <div class="col-md-12 text-center">
+      <%= link_to "Descarga las bases aquí", @user_event.file, class: "h4" if @user_event.file.attached? %>
+    </div>
+    <% if @user_event.images.attached? %>
+      <div class="text-center">
+        <div class="h2 font-weight-bold pt-4">
+          Galería
+        </div>
+        <div class='row'>
+          <% @user_event.images.each do |image| %>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">  
+              <a class="thumbnail" data-toggle="modal" data-title=""
+                data-image="<%= url_for(image)%>"
+                data-target="#image-gallery">
+              <%= image_tag image, class: 'img-thumbnail', style: "height: 250px; width: 250px; object-fit: cover;" %>
+              </a>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
     <div class="text-right">
       <%= @user_event.date.strftime("%d-%m-%y") %>
     </div>
