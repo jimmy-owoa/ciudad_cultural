@@ -25,6 +25,6 @@ class Frontend::PostulationsController < Frontend::FrontendsController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def postulation_params
-    params.require(:postulation).permit(:name, :lastname, :email, :message, :user_event_id, images: [])
+    params.require(:postulation).permit(:name, :lastname, :email, :message, :user_event_id, :phone, :stand, images: [])
   end
 end

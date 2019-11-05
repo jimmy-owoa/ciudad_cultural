@@ -22,6 +22,16 @@
   </div>
 
   <div class="field">
+    <%= form.label "Stand (ver stands disponibles en las bases)" %>
+    <%= form.text_field :stand, class: "form-control", required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Teléfono" %>
+    <%= form.text_field :phone, class: "form-control", required: true %>
+  </div>
+
+  <div class="field">
     <%= form.label :email %>
     <%= form.text_field :email, class: "form-control", type: 'email', required: true %>
   </div>

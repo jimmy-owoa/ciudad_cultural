@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @postulation.name %>
 </p>
 
 <p>
-  <strong>Lastname:</strong>
+  <strong>Apellido:</strong>
   <%= @postulation.lastname %>
 </p>
 
@@ -16,12 +16,22 @@
 </p>
 
 <p>
-  <strong>Message:</strong>
+  <strong>Stand:</strong>
+  <%= @postulation.stand %>
+</p>
+
+<p>
+  <strong>Teléfono:</strong>
+  <%= @postulation.phone %>
+</p>
+
+<p>
+  <strong>Mensaje:</strong>
   <%= @postulation.message %>
 </p>
 
 <p>
-  <strong>User event:</strong>
+  <strong>Evento:</strong>
   <%= @postulation.user_event.title %>
 </p>
 
