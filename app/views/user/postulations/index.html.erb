@@ -11,14 +11,16 @@
       <div class="table-responsive">
         <table class="table table-bordered table-md">
           <tr>
+            <th>Número</th>
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Email</th>
             <th>Evento</th>
             <th colspan="3"></th>
           </tr>
-          <% @postulations.each do |postulation| %>
+          <% @postulations.each_with_index do |postulation, idx| %>
             <tr>
+              <td><%= idx + 1 %></td>
               <td><%= postulation.name %></td>
               <td><%= postulation.lastname %></td>
               <td><%= postulation.email %></td>
