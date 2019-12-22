@@ -8,4 +8,5 @@ class User::Event < ApplicationRecord
   scope :next_events, -> { where("date > ?", Date.today) }
   scope :past_events, -> { where("date < ?", Date.today) }
   scope :talca_events, -> { where(is_talca: true) }
+  scope :active_events, -> { where(active: true) }
 end

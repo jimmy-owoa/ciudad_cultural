@@ -28,7 +28,7 @@ class User::EventsController < User::UsersController
 
     respond_to do |format|
       if @user_event.save
-        format.html { redirect_to @user_event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @user_event, notice: "Event was successfully created." }
         format.json { render :show, status: :created, location: @user_event }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class User::EventsController < User::UsersController
   def update
     respond_to do |format|
       if @user_event.update(user_event_params)
-        format.html { redirect_to @user_event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @user_event, notice: "Event was successfully updated." }
         format.json { render :show, status: :ok, location: @user_event }
       else
         format.html { render :edit }
@@ -56,19 +56,20 @@ class User::EventsController < User::UsersController
   def destroy
     @user_event.destroy
     respond_to do |format|
-      format.html { redirect_to user_events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to user_events_url, notice: "Event was successfully destroyed." }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_event
-      @user_event = User::Event.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_event_params
-      params.require(:user_event).permit(:title, :description, :date, :is_talca, :file, :main_image, images: [])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_event
+    @user_event = User::Event.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def user_event_params
+    params.require(:user_event).permit(:title, :description, :date, :is_talca, :file, :main_image, :active, images: [])
+  end
 end

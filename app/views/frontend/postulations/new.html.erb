@@ -1,7 +1,14 @@
+<% if @events.present? %>
 <div class="section-header">
   <div class="text-uppercase font-weight-bold-max display-4 text-center">Formulario de postulación</div>
 </div>
-<%= render 'form', postulation: @postulation %>
+  <%= render 'form', postulation: @postulation %>
+  <% else %>
+  <div class="section-header">
+  <div class="text-uppercase font-weight-bold-max display-4 text-center">No hay eventos disponibles para postular.</div>
+</div>
+<% end %>
+
 
 <br>
 <%= link_to 'Volver', root_path %>

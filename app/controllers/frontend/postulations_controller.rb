@@ -2,7 +2,7 @@ class Frontend::PostulationsController < Frontend::FrontendsController
   # GET /postulations/new
   def new
     @postulation = Postulation.new
-    @events = User::Event.next_events
+    @events = User::Event.active_events.next_events
   end
 
   # POST /postulations
