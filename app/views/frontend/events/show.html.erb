@@ -5,7 +5,9 @@
       <div class="text-uppercase font-weight-bold-max h1 text-center"><%= @user_event.title %></div>
     </div>
     <div class="col-md-12 text-center">
-      <% if @user_event.main_image.attachment %>
+      <% if @user_event.video.attached? %>
+        <%= video_tag @user_event.video.service_url, size: "720x480", controls: true %>
+      <% elsif @user_event.main_image.attachment %>
           <%= image_tag @user_event.main_image.variant(resize: "x500"), style:'height: 400px; width: 400px; object-fit: cover;'%>
         <% else %>
           <%= image_tag asset_url("computador.png"), style:'height: 160px; object-fit: cover;'%>

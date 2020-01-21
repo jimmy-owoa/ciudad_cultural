@@ -22,6 +22,12 @@
       <%= @user_event.date %>
     </p>
     <p>
+      <strong>
+        Video
+      </strong>
+    </p>
+   <%= video_tag @user_event.video.service_url, size: "720x480", controls: true %>
+    <p>
       <strong>Galería</strong>
     </p>
       <% @user_event.images.each do |image| %>

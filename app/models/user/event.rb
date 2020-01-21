@@ -2,6 +2,7 @@ class User::Event < ApplicationRecord
   has_many_attached :images
   has_one_attached :file
   has_one_attached :main_image
+  has_one_attached :video
 
   has_many :postulations, class_name: "Postulation"
 

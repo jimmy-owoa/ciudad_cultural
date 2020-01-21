@@ -70,6 +70,6 @@ class User::EventsController < User::UsersController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_event_params
-    params.require(:user_event).permit(:title, :description, :date, :is_talca, :file, :main_image, :active, images: [])
+    params.require(:user_event).permit(:title, :description, :date, :is_talca, :file, :main_image, :active, :video, images: [])
   end
 end
