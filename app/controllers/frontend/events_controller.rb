@@ -17,6 +17,6 @@ class Frontend::EventsController < Frontend::FrontendsController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_user_event
-    @user_event = User::Event.find(params[:id])
+    @user_event = User::Event.find_by(slug: params[:id])
   end
 end

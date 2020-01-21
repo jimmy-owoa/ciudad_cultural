@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_22_041218) do
+ActiveRecord::Schema.define(version: 2020_01_21_223033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_12_22_041218) do
     t.boolean "is_talca"
     t.bigint "postulations_id"
     t.boolean "active", default: true
+    t.string "slug"
     t.index ["postulations_id"], name: "index_user_events_on_postulations_id"
   end
 

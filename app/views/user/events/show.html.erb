@@ -26,7 +26,9 @@
         Video
       </strong>
     </p>
-   <%= video_tag @user_event.video.service_url, size: "720x480", controls: true %>
+    <% if @user_event.video.attached? %>
+      <%= video_tag @user_event.video.service_url, size: "720x480", controls: true %>
+    <% end %>
     <p>
       <strong>Galería</strong>
     </p>
