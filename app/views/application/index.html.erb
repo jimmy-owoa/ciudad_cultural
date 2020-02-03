@@ -22,7 +22,7 @@
 			<% if @events.first.main_image.attachment %>
 				<%= image_tag @events.first.main_image.variant(resize: "500x"), style:'height: 500px; object-fit: cover;', class: "img-fluid"%>
 			<% else %>
-				<%= image_tag asset_url("computador.png"), style:'height: 500px; object-fit: cover;'%>
+				<%= image_tag asset_url("computador.png"), style:'height: 500px; object-fit: cover;', class: 'img-fluid'%>
 			<% end %>
 		</div>
 		<div class="col-md-12 pt-2">

@@ -6,7 +6,6 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="La Ciudad Cultural, un espacio cultural en Chile.">
-
     <%= stylesheet_link_tag    'frontend', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/google_analytics' %>
     <%= javascript_include_tag 'frontend', 'data-turbolinks-track': 'reload' %>
@@ -30,39 +29,16 @@
         <li class="nav-item">
           <%= link_to "Contacto", contact_path, class:'nav-link js-scroll-trigger'%>
         </li>
-        <%# <li class="nav-item">
-          <%= link_to "Únete", work_with_us_path, class:'nav-link js-scroll-trigger'%>
-        <%# </li> %>
       </ul>
     </header>
   </div>
-<!-- <nav class="navbar navbar-expand-lg navbar-light pt-4" id="mainNav">
-  <div class="container align-items-start">
-    <a class="navbar-brand js-scroll-trigger" href="/"></a><%= link_to (image_tag asset_url("logo.png"), class: 'img', style: 'max-height: 80px'), root_path %>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto my-2 my-lg-0 pr-4">
-        <li class="nav-item">
-          <%= link_to "Somos", members_path, class:'nav-link js-scroll-trigger'%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Eventos", events_path, class:'nav-link js-scroll-trigger'%>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Contacto", contact_path, class:'nav-link js-scroll-trigger'%>
-        </li>
-      </ul>
-      <%= link_to "Únete", work_with_us_path, class:'btn btn-primary', style: 'border-radius: 12rem;'%>
-    </div>
-  </div>
-</nav>-->
   <div class="container pb-4">
     <p class="notice alert-success"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
+<%= link_to (image_tag asset_url("whatsapp.png"), class: 'img', style: "height: 80px; position: fixed; z-index: 9; bottom: 0; right: 0;"), "https://wa.me/56947423460?text=Mensaje desde el sitio web: "%>
+
   <footer id="sticky-footer" class="py-4 bg-light text-dark-50">
     <div class="container text-center">
       <small>Copyright &copy; La Ciudad Cultural | </small>

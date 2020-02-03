@@ -4,7 +4,7 @@ class User::EventsController < User::UsersController
   # GET /user/events
   # GET /user/events.json
   def index
-    @user_events = User::Event.all
+    @user_events = User::Event.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /user/events/1

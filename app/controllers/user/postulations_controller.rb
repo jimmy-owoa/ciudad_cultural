@@ -4,7 +4,7 @@ class User::PostulationsController < User::UsersController
   # GET /postulations
   # GET /postulations.json
   def index
-    @postulations = Postulation.all
+    @postulations = Postulation.all.paginate(page: params[:page], per_page: 10)
   end
 
   # GET /postulations/1

@@ -28,6 +28,7 @@
             </tr>
           <% end %>
         </table>
+          <%= will_paginate @user_events %>
         <%= link_to 'Nuevo evento', new_user_event_path %>
       </div>
     </div>
