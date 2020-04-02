@@ -4,7 +4,7 @@ class User::Event < ApplicationRecord
   has_one_attached :main_image
   has_one_attached :video
 
-  has_many :postulations, class_name: "Postulation"
+  has_many :postulations, class_name: "Postulation", dependent: :destroy
 
   scope :next_events, -> { where("date > ?", Date.today) }
   scope :past_events, -> { where("date < ?", Date.today) }
